@@ -2,21 +2,9 @@ import unittest
 
 
 def find_rotation_point(words):
-
-    # Find the rotation point in the list
-    count=-1
-    w1,w2=[],[]
-    w2=words[:]
-    w2.sort()
-    for i in words:
-        if w2[0]==i:
-            count+=1
-            return count
-        else:
-            count+=1
-            
-
-    return -1
+    for i in range(len(words)-1):
+        if words[i]>words[i+1]:
+            return i+1
 
 
 
