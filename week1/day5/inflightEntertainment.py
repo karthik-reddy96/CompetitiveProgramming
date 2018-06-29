@@ -1,5 +1,5 @@
 import unittest
-
+"""
 
 def can_two_movies_fill_flight(movie_lengths, flight_length):
 
@@ -33,22 +33,26 @@ def check(arr,leng):
             return True
     return False
 
+"""
+def can_two_movies_fill_flight(movie_lengths, flight_length):
 
+   # Determine if two movie runtimes add up to the flight length
+   arr = [0]*20
+   length = len(movie_lengths)
+   for i in range(length):
+       arr[movie_lengths[i]]+=1
+   for i in range(20):
+       if arr[i]!=0:
+           difference = flight_length-i
+           if arr[difference]!=0:
+               if i != difference:
+                   return True
+               elif i == difference and arr[i] >= 2:
+                   return True
+           
+   
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+   return False
 
 # Tests
 
