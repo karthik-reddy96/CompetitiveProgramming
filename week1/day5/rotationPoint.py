@@ -10,16 +10,16 @@ def find_rotation_point(words):
 def find_rotation_point(words):
 
    # Find the rotation point in the list
-   l=0
-   r = len(words)-1
-   while l<=r: 
-       mid = int (l + (r - l)/2)
-       if words[mid-1] >= words[r] and words[mid] <= words[r]:
+   low=0
+   high = len(words)-1
+   while low<=high: 
+       mid = int (low + (high - low)/2)
+       if words[mid-1] >= words[high] and words[mid] <= words[high]:
            return mid
-       elif words[mid] > words[r]:
-           l = mid+1
+       elif words[mid] > words[high]:
+           low = mid+1
        else:
-           r = mid-1 
+           high = mid-1 
 
 
 
