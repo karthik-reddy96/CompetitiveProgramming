@@ -1,4 +1,4 @@
-def queueReconstruction(personList):
+def Reconstruct(personList):
     personList=sorted(personList)
     personList.reverse()
     
@@ -15,6 +15,7 @@ def queueReconstruction(personList):
     return answer
    
 
-print (queueReconstruction([[7,0], [4,4], [7,1], [5,0], [6,1], [5,2]]))
-print(queueReconstruction([[12,0],[6,3],[3,4],[9,2], [11,1],[1,5]]))
-print(queueReconstruction([ [2,4], [5,1], [3,3], [1,5], [4,2], [6,0]]))
+print (Reconstruct([[7,0], [4,4], [7,1], [5,0], [6,1], [5,2]]))
+print(Reconstruct([[12,0],[6,3],[3,4],[9,2], [11,1],[1,5]]))
+print(Reconstruct([ [2,4], [5,1], [3,3], [1,5], [4,2], [6,0]]))
+
